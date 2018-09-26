@@ -1,2 +1,0 @@
-# pythontutor_strikes
-help.
