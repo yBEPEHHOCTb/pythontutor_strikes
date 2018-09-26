@@ -1,10 +1,8 @@
-N,K=list(map(int,input().split()))
-lst=[]
-for i in range(K):
-    lst.append(set())
-    a_i,b_i=list(map(int,input().split()))
-    while a_i<=N:
-        if a_i%6!=0 and a_i%7!=0:
-            lst[i].add(a_i)
-        a_i+=b_i
-print(len(set.union(*lst)))
+days,number_of_parties=list(map(int,input().split()))
+strike_sets=set()
+for party in range(number_of_parties):
+    strike_day,strike_freqs=list(map(int,input().split()))
+    while strike_day<=days:
+        if strike_day!=6 and strike_day!=7:
+            strike_sets.add(strike_day)
+        strike_day+=strike_freqs
